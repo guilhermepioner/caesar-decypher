@@ -1,7 +1,40 @@
 **[EN-US]**
-# Caeser Decypher
+# Caeser Decipher
 
-> TBD - Some English Content
+This repository contains a console application that I developed in 2020, with a classmate during my high school years, in the subject of **Elements of Programming**. The idea of this project was to create an automatic decipher for the famous Caesar's Cipher.
+
+## What would an automatic decipher be?
+
+When I refer to an automatic decryptor in this repository, it means that the program should receive the encrypted message and, without any other information, be able to present the two most probable translations of it to the user.
+
+## What approach was used?
+
+o find the most probable answers, we used a system of weights for the most common letters in the Portuguese language, where the most common have a higher weight, and the less common have a lower weight.
+
+When these letters appear, their weights are added to an overall sum for the current shift.
+
+To find the best answers, just look for the shifted messages with the highest sum value; these will be the most likely to be correct.
+
+## Options and How to Use
+
+After the landing page, you are presented with two options:
+
+1. [Cipher a message in Caesar to a text file](#cipher)
+2. [Decipher a message in Caesar using a text file](#decipher)
+
+### **Cipher**
+
+For the first option, initially, it is necessary to choose which .txt file the user wants the encoded message to be saved to.
+
+After that, simply enter the message to be encrypted and which shift should be applied.
+
+### **Decipher**
+
+For the second option, the user needs to select a .txt file that already contains an encrypted message, in uppercase letters and without spaces.
+
+Having selected the file, there are two possible ways: decrypt it using brute force (lists all possible rotations) or try to decrypt it automatically using the method explained previously.
+
+Regardless of the option chosen, the decryption results are saved in a **.txt file whose name is the same as the original file plus the suffix "_dec"**.
 
 ---
 
@@ -29,16 +62,16 @@ maior valor da soma geral, estas serão as mais prováveis de estarem corretas.
 
 Após a landing page da aplicação, são apresentadas duas opções:
 
-1. [Cifrar uma mensagem em César utilizando um arquivo de texto](#cypher-1)
-2. [Decifrar uma mensagem em César utilizando um arquivo de texto](#decypher-2)
+1. [Cifrar uma mensagem em César para um arquivo de texto](#cifrador)
+2. [Decifrar uma mensagem em César utilizando um arquivo de texto](#decifrador)
 
-<h3 id="cypher-1"><strong>Cifrador</strong></h3>
+### **Cifrador**
 
 Para a primeira opção, inicialmente, é necessário escolher qual arquivo .txt o usuário deseja que a mensagem codificada seja salva.
 
 Após isso, basta digitar a mensagem à ser criptografada e qual deslocamento deve ser aplicado.
 
-<h3 id="decypher-2"><strong>Decifrador</strong></h3>
+### **Decifrador**
 
 Para a segunda opção, o usuário precisa selecionar um arquivo .txt que já contenha uma mensagem criptografada, em letras maiúsculas e sem espaços.
 
